@@ -12,53 +12,64 @@
     />
     <link rel="stylesheet" href="/main.css" />
   </head>
+  
   <body>
-    <div class="container-fluid">
-      <div class="container col-xxl-8 px-4 py-5">
-        <div class="row">
-          <div class="col">
+    <!--blog page-->
+    <div class="container blog-style">
+      <div class="container col-xxl-8 px-4 py-5"><h1>Contact Us</h1>
+        <form action="blog/submit" method="post">
+          <div class="row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="Fname"
+                placeholder="First name"
+                aria-label="First name"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="LastName"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"></label>
             <input
-              type="text"
+              placeholder="Email"
+              type="email"
+              name="exampleInputEmail1"
               class="form-control"
-              placeholder="First name"
-              aria-label="First name"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
             />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-          <div class="col">
-            <input
-              type="text"
+          <div class="form-floating mt-2">
+            <textarea
+              name="textarea"
               class="form-control"
-              placeholder="Last name"
-              aria-label="Last name"
-            />
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 100px"
+            ></textarea>
+            <label for="floatingTextarea2">Comments</label>
           </div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
-        <div class="form-floating">
-          <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
-            id="floatingTextarea2"
-            style="height: 100px"
-          ></textarea>
-          <label for="floatingTextarea2">Comments</label>
-        </div>
+          <input class="btn btn-primary mt-2" type="submit" value="submit">
+        </form>
       </div>
-    </div> <%- include("partials/footer") %>
-
+    </div>
+    <!-- Footer -->
+    <%- include("partials/footer") %>
    
+    
+
   </body>
 </html>
