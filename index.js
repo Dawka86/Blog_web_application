@@ -13,23 +13,19 @@ app.get("/", (req, res)=>{
 app.get("/about",(req, res)=>{
     res.render("about.ejs");
 })
-app.get("/blog", (req,res)=>{
-    res.render("blog.ejs");
+app.get("/contact", (req,res)=>{
+    res.render("contact.ejs"); 
 })
 
 
-app.post("/blog/submit", (req,res)=>{
+app.post("/contact", (req,res)=>{
     const name = req.body["Fname"];
     const surname = req.body["LastName"];
     const email = req.body["exampleInputEmail1"];
-    const massage = req.body["textarea"];
-    
-    console.log(name);
-    console.log(surname);
-    console.log(email);
-    console.log(massage);
-
-})
+    const message = req.body["textarea"];
+    console.log(name, surname, email, message);
+    res.render("contact.ejs",{name, surname, email, message});
+});
 
 
 

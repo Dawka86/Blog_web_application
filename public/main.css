@@ -12,23 +12,17 @@ body{
 
   background: linear-gradient(
     90deg,
-    hsla(148, 89%, 78%, 1) 0%,
-    hsla(210, 81%, 22%, 1) 100%
+    hsla(186, 33.33%, 94.12%, 1) 0%,
+    hsla(216.28, 40.95%, 79.41%, 1)100%
   );
 }
 
 .buttonHover:hover {
-  background: hsla(42, 93%, 57%, 1);
-
-  background: linear-gradient(
-    90deg,
-    hsla(42, 93%, 57%, 1) 0%,
-    hsla(358, 78%, 62%, 1) 100%
-  );
+  background: #F2865E;
 }
 
 .buttonsBorder{
-  border: 1px solid #fb844a;
+  border: 1px solid #F2865E;
 }
 .text_color{
   color: fb844a;
@@ -36,14 +30,45 @@ body{
 .mainGradient{
   background-color: #F2F2F2;
 }
-.blog-style {
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  width: 50%;
-
-}
 .footer{
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0;
+}
+.poster{
+  background-image: url(/images/3.jpg);
+  opacity: 0.95;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.poster-text{
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1.0;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+.errors-fields{
+  color: red;
+  align-items: center;
+  text-align: center;
+}
+.info-reminder{
+  background-color: blue;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+.succes_info{
+  background-color: green;
+  color: white;
+  align-items: center;
+  text-align: center;
+  opacity: 0.7;
 }
