@@ -17,6 +17,31 @@ app.get("/contact", (req,res)=>{
     res.render("contact.ejs"); 
 })
 
+app.get("/premierLeague", (req,res)=>{
+    res.render("partials/ligi/Premier League/premierLeague.ejs")
+})
+
+app.get("/laliga", (req,res)=>{
+    res.render("partials/ligi/LaLiga/laLiga.ejs")
+})
+
+app.get("/bundesliga", (req,res)=>{
+    res.render("partials/ligi/Bundesliga/bundesliga.ejs")
+})
+
+app.get("/serieA", (req,res)=>{
+    res.render("partials/ligi/Serie A/serieA.ejs")
+})
+
+app.get("/ligue1", (req,res)=>{
+    res.render("partials/ligi/Ligue 1/ligue1.ejs")
+})
+
+app.get("/ekstraklasa", (req,res)=>{
+    res.render("partials/ligi/Ekstraklasa/ekstraklasa.ejs")
+})
+
+
 
 app.post("/contact", (req,res)=>{
     const name = req.body["Fname"];
