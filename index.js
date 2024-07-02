@@ -1,9 +1,23 @@
 import express from "express";
 import bodyParser from "body-parser";
+import axios from "axios";
+import env from "dotenv";
+
 
 const app = express();
 const port = 3000;
+env.config();
+
+const config = {
+    method: 'get',
+    url: 'https://v3.football.api-sports.io/standings?league=140&season=2023',
+    headers: {
+      'x-rapidapi-key': process.env.API_PASSWORD, 
+      'x-rapidapi-host': process.env.RAPID_HOST
+    }
+  };
 app.use(express.static("public"));
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -21,9 +35,16 @@ app.get("/premierLeague", (req,res)=>{
     res.render("partials/ligi/Premier League/premierLeague.ejs")
 })
 
-app.get("/laliga", (req,res)=>{
-    res.render("partials/ligi/LaLiga/laLiga.ejs")
-})
+
+app.get("/laliga", async (req, res) => {
+    try {const response = await axios(config);
+        const result = response.data;
+        console.log(JSON.stringify(result));
+        res.render("partials/ligi/LaLiga/laLiga.ejs", { data: result });
+      } catch (error) {
+        console.error("Failed to make request:", error.message);
+      }     
+});
 
 app.get("/bundesliga", (req,res)=>{
     res.render("partials/ligi/Bundesliga/bundesliga.ejs")

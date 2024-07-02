@@ -7,36 +7,39 @@ body{
   justify-content: center;
   align-items: center;
 }
-.footerBackground {
-  background: hsla(148, 89%, 78%, 1);
-
-  background: linear-gradient(
-    90deg,
-    hsla(186, 33.33%, 94.12%, 1) 0%,
-    hsla(216.28, 40.95%, 79.41%, 1)100%
-  );
+.footer_background {
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  color: rgb(71, 128, 109);
+  font-family: "Finger Paint", sans-serif;
+}
+.fotter_tittle{
+  color: #ff0f7b;
+  font-size: x-small;
 }
 
 .buttonHover:hover {
-  background: #F2865E;
+  background: rgb(71, 128, 109);
+  color: #F2F2F2;
 }
 
 .buttonsBorder{
-  border: 1px solid #F2865E;
+  border: 1px solid rgb(71, 128, 109);
 }
 .text_color{
-  color: fb844a;
+  color: rgb(71, 128, 109);
+  font-weight: 600;
+  font-size: large;
 }
 .mainGradient{
-  background-color: #F2F2F2;
+  background-color: white;
 }
 .footer{
   margin-top: 0;
   margin-bottom: 0;
 }
 .poster{
-  background-image: url(/images/3.jpg);
-  opacity: 0.95;
+  background-image: url(/images/5.jpg);
+  opacity: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -75,3 +78,95 @@ body{
 .arrow {
   color: black;
 }
+.table-style{
+  text-align: center;
+  align-items: center;
+  margin-top: 3em;
+}
+.table-headers{
+  font-size: larger;
+}
+.table-gradient{
+  background: hsla(148, 89%, 78%, 1);
+
+  background: linear-gradient(
+    90deg,
+    #ff0f7b 0%,
+    #f89b29 100%
+  );
+}
+
+.img_logo {
+  width: 5vh;
+  height: 5vh;
+  padding: 1px;
+  text-align: left;
+  align-items: start;
+}
+.titlle_name{
+  font-family: "Finger Paint", sans-serif;
+  font-size: 9vh;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(71, 128, 109);
+}
+.title_showing{
+  color: #ff0f7b;
+  font-size: x-large;
+  animation-name: title;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes title {
+  0%   {opacity: 0.0;
+      
+      }
+  25%  {opacity: 0.3;
+      
+      }
+  50%  {opacity: 0.6;
+      }
+  100% {opacity: 1.0;
+      
+      }
+}
+.animated_box {
+  position: relative;
+  animation: moveRight 3s ease-in;
+
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animated_box_second {
+  position: relative;
+  opacity: 0;
+  animation: moveRight_second 3s ease-in 2s forwards;
+}
+@keyframes moveRight_second{
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
